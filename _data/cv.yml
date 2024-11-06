@@ -4,35 +4,36 @@
     - name: Full Name
       value: Kolichala Rajashekar
     - name: Languages
-      value: Telugu, Hindi, and English
+      value: Telugu, Hindi, English
 
 - title: Education
   type: time_table
   contents:
     - title: PhD
       institution: Indian Institute of Technology Bhilai, India
-      year: 2019 Dec - Present
-      description:
+      year: "2019 Dec - Present"
+      description: |
         Computer Science and Engineering
-        - title: Research Interests.
-          contents:
-            - ML Systems, Reinforcemene Learning for System Optimization, Federated Learning, UAV Networks
-            
+        Research Interests:
+          - ML Systems
+          - Reinforcement Learning for System Optimization
+          - Federated Learning
+          - UAV Networks
+
     - title: Masters
       institution: Jawaharlal Nehru Technological University Hyderabad, India
-      year: 2018
-      description:
-        - Computer Science and Engineering
-        
+      year: "2018"
+      description: |
+        Computer Science and Engineering
 
 - title: Honors and Awards
-  
   type: list
   contents:
     - UGC NET JRF Fellowship for Five Years of PhD
     - Best Poster Award at ICDCN 2023
-    - Travel Grant Awards for attedning conference ICDCS 2022, ICDCN 2023, IEEE NOMS 2024, CODS COMAD 2024
-    - Qualified national level exams GATE , UGC NET with JRF
-
-
-
+    - Travel Grant Awards for attending conferences:
+      - ICDCS 2022
+      - ICDCN 2023
+      - IEEE NOMS 2024
+      - CODS COMAD 2024
+    - Qualified national level exams GATE, UGC NET with JRF
