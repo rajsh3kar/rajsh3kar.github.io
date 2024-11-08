@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+Our paper titled "Reinforcement Learning for Real-Time Federated Learning for Resource-Constrained Edge Cluster " has been accepted to the Journal of Network and Systems Management (JNSM) Springer Nature (SCI Q1) 

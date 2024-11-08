@@ -1,9 +1,9 @@
 ---
 layout: post
 title: A long announcement with details
-date: 2024-4-07 16:11:00-0400
+date: 2024-1-07 16:11:00-0400
 inline: True
 related_posts: false
 ---
 
-Student Travel Grants for attending IEEE NOMS 2024
+Got the best poster award ICDCN 2023, IIT KGP

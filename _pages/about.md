@@ -17,6 +17,4 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-PhD Scholar at Indian Institute of Technology Bhilai. 
-
-
+PhD Scholar at Indian Institute of Technology Bhilai.
