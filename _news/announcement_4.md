@@ -1,9 +1,8 @@
 ---
 layout: post
-title: A long announcement with details
-date: 2024-1-07 16:11:00-0400
-inline: True
+date: 2023-01-07
+inline: true
 related_posts: false
 ---
 
-Got the best poster award ICDCN 2023, IIT KGP
+Received **Best Poster Award** at ICDCN 2023, IIT Kharagpur for "Topology-Aware Cluster Configuration for Real-time Multi-access Edge Computing".

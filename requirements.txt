@@ -1,1 +1,4 @@
 nbconvert
+scholarly>=1.7.0
+bibtexparser>=1.4.0
+pyyaml>=6.0

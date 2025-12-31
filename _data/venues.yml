@@ -1,9 +1,20 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+# Conference and Journal Venue Information
+"ICDCS":
+  url: https://ieeexplore.ieee.org/xpl/conhome/1000164/all-proceedings
+  color: "#00539B"  # IEEE Blue
 
-"PhysRev":
-  url: https://journals.aps.org/
+"ICDCN":
+  url: https://dl.acm.org/conference/icdcn
+  color: "#0085CA"  # ACM Blue
 
-"Vision":
-  color: "#009f36"
+"NOMS":
+  url: https://noms2024.ieee-noms.org/
+  color: "#00539B"  # IEEE Blue
+
+"MobiQuitous":
+  url: https://mobiquitous.eai-conferences.org/
+  color: "#009f36"  # Green
+
+"JNSM":
+  url: https://www.springer.com/journal/10922
+  color: "#FFD700"  # Springer Gold
