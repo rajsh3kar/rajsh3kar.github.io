@@ -8,6 +8,7 @@ profile:
   align: right
   image: prof_pic.jpeg
   image_circular: false # crops the image to make it circular
+  cache_bust: false  # disable cache busting to avoid webp generation issues
   more_info: >
     <p>Gopad Hostel</p>
     <p>IIT Bhilai, Raipur</p>
