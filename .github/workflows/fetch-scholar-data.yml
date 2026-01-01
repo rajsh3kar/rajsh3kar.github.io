@@ -6,6 +6,9 @@ on:
     - cron: '0 2 * * *'
   workflow_dispatch: # Allow manual triggering
 
+permissions:
+  contents: write  # Allow workflow to write to repository
+
 jobs:
   fetch-publications:
     runs-on: ubuntu-latest
