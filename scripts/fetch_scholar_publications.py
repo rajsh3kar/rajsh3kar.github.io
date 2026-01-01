@@ -34,15 +34,21 @@ class ScholarSyncManager:
         self.root_dir = Path(__file__).parent.parent
         self.bib_file = self.root_dir / '_bibliography' / 'papers.bib'
         self.news_dir = self.root_dir / '_news'
-        self.data_file = self.root_dir / '_data' / 'publications.yml'
+        self.data_dir = self.root_dir / '_data'
+        self.data_file = self.data_dir / 'publications.yml'
+        
+        # Ensure directories exist
+        self.news_dir.mkdir(exist_ok=True)
+        self.data_dir.mkdir(exist_ok=True)
+        (self.root_dir / '_bibliography').mkdir(exist_ok=True)
         
         # Setup scholarly with proxy to avoid blocks
         try:
             pg = ProxyGenerator()
             pg.FreeProxies()
             scholarly.use_proxy(pg)
-        except:
-            print("Warning: Could not setup proxy. Continuing without proxy...")
+        except Exception as e:
+            print(f"Warning: Could not setup proxy: {e}. Continuing without proxy...")
     
     def fetch_publications(self):
         """Fetch all publications from Google Scholar"""
