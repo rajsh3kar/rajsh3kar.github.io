@@ -93,11 +93,11 @@
 
 ### 3. BibTeX → Website
 
-```liquid
-<!-- Jekyll processes BibTeX with jekyll-scholar -->
-{% bibliography %}
-
-<!-- Displays with badges, links, citations -->
+```markdown
+<!-- Jekyll processes BibTeX with jekyll-scholar plugin -->
+<!-- Note: This works on the custom deploy workflow, not GitHub Pages default -->
+Publications are automatically rendered from _bibliography/papers.bib
+with venue colors, citation counts, and links.
 ```
 
 ### 4. News Generation
