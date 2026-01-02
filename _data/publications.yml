@@ -1,0 +1,32 @@
+last_updated: '2026-01-02T03:43:43.686229'
+total_publications: 7
+total_citations: 8
+h_index: 2
+recent_publications:
+- title: Topology-aware cluster configuration for real-time multi-access edge computing
+  year: 2023
+  citations: 4
+  venue: ''
+- title: Reinforcement learning for real-time federated learning for resource-constrained
+    edge cluster
+  year: 2024
+  citations: 1
+  venue: ''
+- title: Minimizing Data Retrieval Delay in Edge Computing
+  year: 2023
+  citations: 1
+  venue: ''
+- title: Toward Sustainability-Aware LLM Inference on Edge Clusters
+  year: 2025
+  citations: 0
+  venue: ''
+- title: Optimizing Drone Deployment for Maximized User Connectivity in Areas of Interest
+    Via Deep Reinforcement Learning
+  year: 2025
+  citations: 0
+  venue: ''
+- title: Towards a Mobility-cum-Battery Aware Dynamic UAV Deployment for Uninterrupted
+    Connectivity
+  year: 2024
+  citations: 0
+  venue: ''
