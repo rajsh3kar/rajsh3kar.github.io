@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper titled "Optimizing Drone Deployment for Maximized User Connectivity in Areas of Interest Via Deep Reinforcement Learning" has been published in Unknown Venue.
+Our paper titled "A deep learning-based approach for heterogeneous hotspot-coverage in UAV deployment" has been published in Unknown Venue.

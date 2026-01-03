@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper titled "Toward Sustainability-Aware LLM Inference on Edge Clusters" has been published in Unknown Venue.
+Our paper titled "Optimizing Drone Deployment for Maximized User Connectivity in Areas of Interest Via Deep Reinforcement Learning" has been published in Unknown Venue.
