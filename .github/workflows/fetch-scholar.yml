@@ -1,0 +1,44 @@
+name: Fetch Google Scholar Data
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Run daily at 2 AM UTC
+  workflow_dispatch:  # Allow manual triggering
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-publications:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: Install dependencies
+        run: |
+          pip install scholarly pyyaml
+          
+      - name: Fetch Google Scholar publications
+        run: |
+          python scripts/fetch_scholar.py
+        env:
+          SCHOLAR_ID: wq36gfgAAAAJ
+          
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add src/data/publications.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-update: Fetch latest publications from Google Scholar [skip ci]"
+            git push
+          fi

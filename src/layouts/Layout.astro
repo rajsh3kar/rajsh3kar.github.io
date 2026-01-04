@@ -1,0 +1,55 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "PhD Scholar at IIT Bhilai researching ML Systems, Federated Learning, and Edge Computing." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+      <div class="max-w-6xl mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <a href="/" class="text-xl font-bold text-primary">Kolichala Rajashekar</a>
+          <div class="flex gap-6">
+            <a href="/" class="text-gray-700 hover:text-primary transition">About</a>
+            <a href="/publications" class="text-gray-700 hover:text-primary transition">Publications</a>
+            <a href="/news" class="text-gray-700 hover:text-primary transition">News</a>
+            <a href="/cv" class="text-gray-700 hover:text-primary transition">CV</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <main class="max-w-6xl mx-auto px-4 py-8">
+      <slot />
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-16">
+      <div class="max-w-6xl mx-auto px-4 py-6 text-center text-sm text-gray-600">
+        © 2026 Kolichala R. Rajashekar · Built with <a href="https://astro.build" target="_blank" class="text-primary hover:underline">Astro</a>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+</style>
