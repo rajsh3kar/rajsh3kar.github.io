@@ -4,59 +4,195 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="CV - Kolichala Rajashekar">
   <div class="bg-white rounded-lg shadow-md p-8">
-    <h1 class="text-3xl font-bold mb-8">Curriculum Vitae</h1>
+    <h1 class="text-3xl font-bold mb-2">Kolichala Rajashekar, Ph.D.</h1>
+    <p class="text-gray-600 mb-8">Postdoctoral Researcher · University of Innsbruck, Austria</p>
     
     <div class="space-y-8">
+      <!-- Academic Appointments -->
+      <section>
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">Academic Appointments</h2>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between items-start mb-1">
+              <h3 class="text-lg font-semibold">Postdoctoral Researcher</h3>
+              <span class="text-sm text-gray-500">Mar 2025 – Present</span>
+            </div>
+            <p class="text-gray-600">University of Innsbruck, Austria</p>
+            <ul class="list-disc list-inside mt-2 space-y-1 text-sm text-gray-700">
+              <li><strong>Project:</strong> DATAPACT.eu (Compliance-aware Data/AI pipelines)</li>
+              <li><strong>Role:</strong> Lead Architect designing core architecture patterns (C4 model) for a consortium of 14 industry and academic partners</li>
+              <li>Orchestrating scalable Data/AI pipelines using Kubeflow and Kubernetes for compliance-aware deployment</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
       <section>
         <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">Education</h2>
         <div class="space-y-4">
           <div>
-            <h3 class="text-lg font-semibold">PhD in Computer Science and Engineering</h3>
-            <p class="text-gray-600">Indian Institute of Technology Bhilai</p>
-            <p class="text-sm text-gray-500">Present</p>
+            <div class="flex justify-between items-start mb-1">
+              <h3 class="text-lg font-semibold">Ph.D. in Computer Science and Engineering</h3>
+              <span class="text-sm text-gray-500">Dec 2019 – Dec 2024</span>
+            </div>
+            <p class="text-gray-600">Indian Institute of Technology (IIT) Bhilai, India</p>
+            <ul class="list-disc list-inside mt-2 space-y-1 text-sm text-gray-700">
+              <li><strong>Dissertation:</strong> Machine Learning for Optimizing Resources in Edge Computing</li>
+              <li><strong>Funding:</strong> UGC NET JRF Fellowship</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-start mb-1">
+              <h3 class="text-lg font-semibold">M.Tech. in Computer Science and Engineering</h3>
+              <span class="text-sm text-gray-500">Jul 2015 – Jan 2018</span>
+            </div>
+            <p class="text-gray-600">Jawaharlal Nehru Technological University, Hyderabad, India</p>
+            <p class="text-sm text-gray-700 mt-1">GPA: 8.27/10.0</p>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-start mb-1">
+              <h3 class="text-lg font-semibold">B.Tech. in Computer Science and Engineering</h3>
+              <span class="text-sm text-gray-500">Jul 2010 – Jun 2014</span>
+            </div>
+            <p class="text-gray-600">Jawaharlal Nehru Technological University, Hyderabad, India</p>
           </div>
         </div>
       </section>
 
+      <!-- Grants & Funding -->
+      <section>
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">Research Grants & Funding</h2>
+        <div class="space-y-3">
+          <div>
+            <div class="flex justify-between items-start">
+              <h3 class="font-semibold">Google Cloud Research Credits Program</h3>
+              <span class="text-sm text-gray-500">2024</span>
+            </div>
+            <p class="text-sm text-gray-600 mt-1">
+              <strong>$5,000 USD</strong> · Principal Investigator · Awarded cloud computing resources for research on 
+              ML operations and system management optimization
+            </p>
+          </div>
+          
+          <div>
+            <div class="flex justify-between items-start">
+              <h3 class="font-semibold">UGC NET JRF Fellowship</h3>
+              <span class="text-sm text-gray-500">2019 – 2024</span>
+            </div>
+            <p class="text-sm text-gray-600 mt-1">
+              Competitive 5-year doctoral funding awarded by the Government of India (Top 2% qualification rate)
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-semibold">Travel Grants</h3>
+            <p class="text-sm text-gray-600 mt-1">
+              CODS COMAD (2025), IEEE NOMS (2024), ICDCN (2023), IEEE ICDCS (2022)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Research Interests -->
       <section>
         <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">Research Interests</h2>
-        <ul class="list-disc list-inside space-y-2 text-gray-700">
-          <li>ML Systems and Optimization</li>
-          <li>Federated Learning</li>
-          <li>Edge Computing and Multi-Access Edge Computing (MEC)</li>
-          <li>Reinforcement Learning for System Optimization</li>
-          <li>UAV Networks and Dynamic Deployment</li>
-          <li>Distributed Systems</li>
+        <p class="text-gray-700">
+          Machine Learning Systems · EdgeAI · Federated Learning · Reinforcement Learning for Systems Optimization · 
+          Edge Computing · MLOps & Data/AI Pipelines · UAV Networks · Distributed Systems
+        </p>
+      </section>
+
+      <!-- Teaching & Mentorship -->
+      <section>
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">Teaching & Student Supervision</h2>
+        
+        <h3 class="text-lg font-semibold mb-3">Student Supervision</h3>
+        <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+          <li><strong>PhD Students:</strong> Currently mentoring 2 PhD students (University of Innsbruck)</li>
+          <li><strong>Undergraduate Students:</strong> Mentoring 1 Bachelor student (University of Innsbruck)</li>
+          <li><strong>Past Mentorship:</strong> Supervised 2 B.Tech Honors research projects at IIT Bhilai</li>
+        </ul>
+
+        <h3 class="text-lg font-semibold mb-3">Teaching Experience</h3>
+        <p class="font-semibold text-gray-800">Teaching Assistant – IIT Bhilai</p>
+        <p class="text-sm text-gray-600 mb-2">
+          Courses: Machine Learning, Algorithms and Data Structures, Computer System Design, Programming with Python
+        </p>
+        <p class="text-sm text-gray-700">
+          Facilitated lab sessions, graded assignments, and provided one-on-one mentorship for course projects
+        </p>
+      </section>
+
+      <!-- Honors & Awards -->
+      <section>
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">Honors & Awards</h2>
+        <ul class="space-y-2 text-gray-700">
+          <li>🏆 <strong>Best Poster Award</strong>, ICDCN 2023 (IIT Kharagpur)</li>
+          <li>✓ <strong>Qualified Competitive Exams:</strong> GATE 2015, UGC NET JRF (Top 2%), Telangana-SET 2018</li>
         </ul>
       </section>
 
+      <!-- Technical Skills -->
       <section>
-        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">Awards & Honors</h2>
-        <div class="space-y-3">
-          <div>
-            <h3 class="font-semibold">Best Poster Award</h3>
-            <p class="text-sm text-gray-600">ICDCN 2023, IIT Kharagpur</p>
-            <p class="text-sm text-gray-500">January 2023</p>
-          </div>
-          <div>
-            <h3 class="font-semibold">Student Travel Grant</h3>
-            <p class="text-sm text-gray-600">IEEE NOMS 2024</p>
-            <p class="text-sm text-gray-500">April 2024</p>
-          </div>
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">Technical Skills</h2>
+        <div class="space-y-2">
+          <p><strong>ML/AI Frameworks:</strong> PyTorch, Gymnasium (RL), Flower (Federated Learning), Scikit-learn, Transformers (Hugging Face), LangChain</p>
+          <p><strong>Systems & MLOps:</strong> Kubernetes, Kubeflow, Docker, ARGO Workflows, Git, MCP</p>
+          <p><strong>Languages:</strong> Python, C/C++</p>
         </div>
       </section>
 
+      <!-- Contact -->
       <section>
         <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">Contact</h2>
         <div class="space-y-2 text-gray-700">
-          <p><strong>Email:</strong> kolichalar@iitbhilai.ac.in</p>
-          <p><strong>Location:</strong> Gopad Hostel, IIT Bhilai, Raipur, Chhattisgarh, India</p>
+          <p><strong>Email:</strong> rajashekar.kolichala@uibk.ac.at</p>
+          <p><strong>Location:</strong> 6020 Innsbruck, Austria</p>
+          <p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=wq36gfgAAAAJ" target="_blank" class="text-primary hover:underline">Profile Link</a></p>
+          <p><strong>Personal Website:</strong> <a href="https://sites.google.com/view/kolichala-rajashekar/home" target="_blank" class="text-primary hover:underline">View Site</a></p>
+        </div>
+      </section>
+
+      <!-- References -->
+      <section>
+        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">References</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <p class="font-semibold">Dr. Radu Prodan</p>
+            <p class="text-sm text-gray-600">Professor</p>
+            <p class="text-sm text-gray-600">University of Innsbruck, Austria</p>
+            <p class="text-sm text-primary"><a href="mailto:radu.prodan@uibk.ac.at">radu.prodan@uibk.ac.at</a></p>
+          </div>
+
+          <div>
+            <p class="font-semibold">Dr. Subhajit Sidhanta</p>
+            <p class="text-sm text-gray-600">Assistant Professor</p>
+            <p class="text-sm text-gray-600">IIT Kharagpur</p>
+            <p class="text-sm text-primary"><a href="mailto:subhajit@iem.iitkgp.ac.in">subhajit@iem.iitkgp.ac.in</a></p>
+          </div>
+
+          <div>
+            <p class="font-semibold">Dr. Souradyuti Paul</p>
+            <p class="text-sm text-gray-600">Associate Professor</p>
+            <p class="text-sm text-gray-600">IIT Bhilai</p>
+            <p class="text-sm text-primary"><a href="mailto:souradyuti@iitbhilai.ac.in">souradyuti@iitbhilai.ac.in</a></p>
+          </div>
+
+          <div>
+            <p class="font-semibold">Dr. Sushanta Karmakar</p>
+            <p class="text-sm text-gray-600">Professor</p>
+            <p class="text-sm text-gray-600">IIT Guwahati</p>
+            <p class="text-sm text-primary"><a href="mailto:sushantak@iitg.ac.in">sushantak@iitg.ac.in</a></p>
+          </div>
         </div>
       </section>
 
       <div class="mt-8">
-        <a href="/Rajashekar_CV.pdf" target="_blank" class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-          Download Full CV (PDF)
+        <a href="https://sites.google.com/view/kolichala-rajashekar/home" target="_blank" class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+          View Full CV Website
         </a>
       </div>
     </div>
