@@ -1,10 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import publicationsData from '../data/publications.json';
+
+const { publications, last_updated } = publicationsData;
+const hasPublications = publications && publications.length > 0;
 ---
 
 <Layout title="Publications - Kolichala Rajashekar">
   <div class="bg-white rounded-lg shadow-md p-8">
-    <h1 class="text-3xl font-bold mb-8">Publications</h1>
+    <h1 class="text-3xl font-bold mb-4">Publications</h1>
+    
+    {last_updated && (
+      <p class="text-sm text-gray-500 mb-6">
+        Last updated: {new Date(last_updated).toLocaleDateString('en-US', { 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric' 
+        })}
+      </p>
+    )}
     
     <p class="text-gray-600 mb-8">
       Publications are automatically synced from 
@@ -15,41 +29,88 @@ import Layout from '../layouts/Layout.astro';
     </p>
 
     <div class="space-y-6">
-      <div class="border-l-4 border-primary pl-6 py-2">
-        <h3 class="text-lg font-semibold mb-2">
-          Reinforcement Learning for Real-Time Federated Learning for Resource-Constrained Edge Cluster
-        </h3>
-        <p class="text-sm text-gray-600 mb-2">
-          <strong>Journal of Network and Systems Management (JNSM)</strong>, Springer Nature, 2024
-        </p>
-        <p class="text-sm text-gray-500">SCI Q1 Journal</p>
-        <div class="flex gap-4 mt-3">
-          <a href="https://scholar.google.com/citations?user=wq36gfgAAAAJ" target="_blank" class="text-sm text-primary hover:underline">
-            View on Scholar
-          </a>
-        </div>
-      </div>
+      {hasPublications ? (
+        publications.map((pub: any, index: number) => (
+          <div class={`border-l-4 ${index === 0 ? 'border-primary' : 'border-gray-400'} pl-6 py-3`}>
+            <h3 class="text-lg font-semibold mb-2">{pub.title}</h3>
+            
+            {pub.authors && (
+              <p class="text-sm text-gray-600 mb-1">{pub.authors}</p>
+            )}
+            
+            {pub.venue && (
+              <p class="text-sm text-gray-700 mb-2">
+                <strong>{pub.venue}</strong>
+                {pub.year && `, ${pub.year}`}
+              </p>
+            )}
+            
+            <div class="flex gap-4 items-center mt-3">
+              {pub.citations > 0 && (
+                <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
+                  📊 {pub.citations} citations
+                </span>
+              )}
+              
+              {pub.url && (
+                <a href={pub.url} target="_blank" rel="noopener" class="text-sm text-primary hover:underline">
+                  View Paper →
+                </a>
+              )}
+              
+              <a href={`https://scholar.google.com/citations?user=wq36gfgAAAAJ`} target="_blank" rel="noopener" class="text-sm text-primary hover:underline">
+                Google Scholar
+              </a>
+            </div>
+          </div>
+        ))
+      ) : (
+        <div class="space-y-6">
+          <div class="border-l-4 border-primary pl-6 py-2">
+            <h3 class="text-lg font-semibold mb-2">
+              Reinforcement Learning for Real-Time Federated Learning for Resource-Constrained Edge Cluster
+            </h3>
+            <p class="text-sm text-gray-600 mb-2">
+              <strong>Journal of Network and Systems Management (JNSM)</strong>, Springer Nature, 2024
+            </p>
+            <p class="text-sm text-gray-500">SCI Q1 Journal</p>
+            <div class="flex gap-4 mt-3">
+              <a href="https://scholar.google.com/citations?user=wq36gfgAAAAJ" target="_blank" class="text-sm text-primary hover:underline">
+                View on Scholar
+              </a>
+            </div>
+          </div>
 
-      <div class="border-l-4 border-gray-400 pl-6 py-2">
-        <h3 class="text-lg font-semibold mb-2">
-          Towards a Mobility-cum-Battery Aware Dynamic UAV Deployment for Uninterrupted Connectivity
-        </h3>
-        <p class="text-sm text-gray-600 mb-2">
-          <strong>IEEE NOMS 2024</strong>, Miami, FL, USA
-        </p>
-        <p class="text-sm text-gray-500">IEEE/IFIP Network Operations and Management Symposium</p>
-        <div class="flex gap-4 mt-3">
-          <a href="https://ieeexplore.ieee.org/author/37089563751" target="_blank" class="text-sm text-primary hover:underline">
-            View on IEEE Xplore
-          </a>
+          <div class="border-l-4 border-gray-400 pl-6 py-2">
+            <h3 class="text-lg font-semibold mb-2">
+              Towards a Mobility-cum-Battery Aware Dynamic UAV Deployment for Uninterrupted Connectivity
+            </h3>
+            <p class="text-sm text-gray-600 mb-2">
+              <strong>IEEE NOMS 2024</strong>, Miami, FL, USA
+            </p>
+            <p class="text-sm text-gray-500">IEEE/IFIP Network Operations and Management Symposium</p>
+            <div class="flex gap-4 mt-3">
+              <a href="https://ieeexplore.ieee.org/author/37089563751" target="_blank" class="text-sm text-primary hover:underline">
+                View on IEEE Xplore
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
+      )}
 
       <div class="mt-8 p-6 bg-blue-50 rounded-lg">
         <h3 class="font-semibold mb-2">📚 Automated Publication Sync</h3>
-        <p class="text-sm text-gray-700">
+        <p class="text-sm text-gray-700 mb-3">
           This page is automatically updated daily with new publications from Google Scholar. 
-          The system fetches publication data, generates BibTeX entries, and creates news announcements automatically.
+          The system fetches publication data, generates structured information, and updates this page automatically.
+        </p>
+        <p class="text-xs text-gray-600">
+          Next sync: Daily at 2:00 AM UTC • 
+          <a href="https://github.com/rajsh3kar/rajsh3kar.github.io/actions/workflows/fetch-scholar.yml" 
+             target="_blank" 
+             class="text-primary hover:underline">
+            View workflow runs
+          </a>
         </p>
       </div>
     </div>
