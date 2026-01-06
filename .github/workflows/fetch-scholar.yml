@@ -35,7 +35,7 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          git add src/data/publications.json
+          git add src/data/
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
