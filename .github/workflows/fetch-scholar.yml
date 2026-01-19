@@ -1,9 +1,11 @@
 name: Fetch Google Scholar Data
 
 on:
-  schedule:
-    - cron: '0 2 * * *'  # Run daily at 2 AM UTC
-  workflow_dispatch:  # Allow manual triggering
+  # Disabled automatic schedule to stop daily automated syncing.
+  # To re-enable automated runs, restore the `schedule` block below.
+  # schedule:
+  #   - cron: '0 2 * * *'  # Run daily at 2 AM UTC
+  workflow_dispatch:  # Allow manual triggering only
 
 permissions:
   contents: write
