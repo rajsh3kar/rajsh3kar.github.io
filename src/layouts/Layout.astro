@@ -4,7 +4,18 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "PhD Scholar at IIT Bhilai researching ML Systems, Federated Learning, and Edge Computing." } = Astro.props;
+const {
+  title,
+  description = "Postdoctoral researcher at the University of Innsbruck working on compliance-aware data and AI pipelines, edge computing, and machine learning systems.",
+} = Astro.props;
+
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+const links = [
+  { href: "/", label: "About" },
+  { href: "/publications", label: "Publications" },
+  { href: "/news", label: "News" },
+  { href: "/cv", label: "CV" },
+];
 ---
 
 <!doctype html>
@@ -13,32 +24,84 @@ const { title, description = "PhD Scholar at IIT Bhilai researching ML Systems, 
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Kolichala Rajashekar" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-gray-50 text-gray-900">
-    <nav class="bg-white shadow-sm border-b border-gray-200">
-      <div class="max-w-6xl mx-auto px-4 py-4">
-        <div class="flex justify-between items-center">
-          <a href="/" class="text-xl font-bold text-primary">Kolichala Rajashekar</a>
-          <div class="flex gap-6">
-            <a href="/" class="text-gray-700 hover:text-primary transition">About</a>
-            <a href="/publications" class="text-gray-700 hover:text-primary transition">Publications</a>
-            <a href="/news" class="text-gray-700 hover:text-primary transition">News</a>
-            <a href="/cv" class="text-gray-700 hover:text-primary transition">CV</a>
-          </div>
+  <body class="bg-paper text-ink font-sans antialiased">
+    <nav class="border-b border-stone-300/70">
+      <div class="max-w-page mx-auto px-5 h-16 flex items-center justify-between gap-6">
+        <a href="/" class="font-serif text-xl font-semibold tracking-tight text-ink">Kolichala Rajashekar</a>
+        <div class="hidden md:flex items-center gap-7 text-[0.95rem]">
+          {links.map(({ href, label }) => (
+            <a
+              href={href}
+              class:list={[
+                "transition-colors",
+                path === href ? "text-ink font-semibold" : "text-stone-600 hover:text-ink",
+              ]}
+              aria-current={path === href ? "page" : undefined}
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+        <button
+          type="button"
+          id="nav-toggle"
+          class="md:hidden -mr-2 rounded-md p-2 text-ink"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Open menu"
+        >
+          <svg class="menu-icon h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+            <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg class="close-icon hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+            <path stroke-linecap="round" d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-nav" class="hidden border-t border-stone-300/70 md:hidden">
+        <div class="max-w-page mx-auto flex flex-col px-5 py-2">
+          {links.map(({ href, label }) => (
+            <a
+              href={href}
+              class:list={[
+                "border-b border-stone-200/80 py-3 text-[1.05rem] last:border-b-0",
+                path === href ? "font-semibold text-ink" : "text-stone-700",
+              ]}
+              aria-current={path === href ? "page" : undefined}
+            >
+              {label}
+            </a>
+          ))}
         </div>
       </div>
     </nav>
-    
-    <main class="max-w-6xl mx-auto px-4 py-8">
+    <script>
+      const toggle = document.getElementById("nav-toggle");
+      const menu = document.getElementById("mobile-nav");
+      toggle?.addEventListener("click", () => {
+        const open = menu?.classList.toggle("hidden") === false;
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        toggle.querySelector(".menu-icon")?.classList.toggle("hidden", open);
+        toggle.querySelector(".close-icon")?.classList.toggle("hidden", !open);
+      });
+    </script>
+
+    <main class="max-w-page mx-auto px-5 py-10 md:py-14">
       <slot />
     </main>
 
-    <footer class="bg-white border-t border-gray-200 mt-16">
-      <div class="max-w-6xl mx-auto px-4 py-6 text-center text-sm text-gray-600">
-        © 2026 Kolichala R. Rajashekar · Built with <a href="https://astro.build" target="_blank" class="text-primary hover:underline">Astro</a>
+    <footer class="mt-8 border-t border-stone-300/70">
+      <div class="max-w-page mx-auto px-5 py-6 text-sm text-stone-500">
+        © 2026 Kolichala Rajashekar
       </div>
     </footer>
   </body>
@@ -48,8 +111,33 @@ const { title, description = "PhD Scholar at IIT Bhilai researching ML Systems, 
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
-  
-  body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  h1, h2, h3 {
+    font-family: Newsreader, Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid #1e3a5f;
+    outline-offset: 3px;
+  }
+
+  @media print {
+    nav,
+    footer,
+    .no-print {
+      display: none !important;
+    }
+
+    body {
+      background: white;
+    }
+
+    main {
+      max-width: none;
+      padding: 0;
+    }
   }
 </style>

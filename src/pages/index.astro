@@ -1,143 +1,166 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const interests = [
+  "ML systems",
+  "EdgeAI",
+  "Federated learning",
+  "Reinforcement learning",
+  "Edge computing",
+  "MLOps",
+  "UAV networks",
+  "Distributed systems",
+];
+
+const papers = [
+  {
+    venue: "Journal of Network and Systems Management",
+    year: "2025",
+    note: "SCI Q1",
+    title: "Optimizing Drone Deployment for Maximized User Connectivity in Areas of Interest Via Deep Reinforcement Learning",
+    summary: "Deep reinforcement learning for placing drones so more users stay connected inside an area of interest.",
+    href: "https://link.springer.com/article/10.1007/s10922-025-09924-1",
+  },
+  {
+    venue: "Ad Hoc Networks",
+    year: "2025",
+    note: "SCI Q1",
+    title: "A Deep Learning-based Approach for Heterogeneous Hotspot-Coverage in UAV Deployment",
+    summary: "A deep-learning approach to covering uneven demand hotspots when deploying UAVs.",
+    href: "https://www.sciencedirect.com/science/article/pii/S1570870525003750",
+  },
+  {
+    venue: "Journal of Network and Systems Management",
+    year: "2024",
+    note: "SCI Q1",
+    title: "Reinforcement Learning for Real-Time Federated Learning for Resource-Constrained Edge Cluster",
+    summary: "Reinforcement learning that runs real-time federated learning on a resource-constrained edge cluster.",
+    href: "https://link.springer.com/article/10.1007/s10922-024-09857-1",
+  },
+];
+
+const news = [
+  {
+    date: "March 2025",
+    text: "Started as a postdoctoral researcher at the University of Innsbruck, on the DATAPACT project.",
+  },
+  {
+    date: "January 2025",
+    text: "Two papers published in SCI Q1 journals: Ad Hoc Networks and the Journal of Network and Systems Management.",
+  },
+  {
+    date: "December 2024",
+    text: "Defended my PhD at IIT Bhilai. Dissertation: Machine Learning for Optimizing Resources in Edge Computing.",
+  },
+];
 ---
 
-<Layout title="Kolichala Rajashekar - Academic Portfolio">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <!-- Profile Section -->
-    <div class="md:col-span-1">
-      <div class="bg-white rounded-lg shadow-md p-6 sticky top-8">
-        <img 
-          src="/prof_pic.jpeg" 
-          alt="Kolichala Rajashekar" 
-          class="w-full rounded-lg mb-4"
-        />
-        <div class="text-sm text-gray-600 space-y-1">
-          <p>6020 Innsbruck</p>
-          <p>Austria</p>
+<Layout title="Kolichala Rajashekar">
+  <div class="grid items-start gap-10 lg:grid-cols-[15.5rem_minmax(0,1fr)] lg:gap-16">
+    <aside class="lg:sticky lg:top-8">
+      <div class="sm:flex sm:items-start sm:gap-5 lg:block">
+        <div class="h-32 w-32 shrink-0 overflow-hidden rounded-2xl bg-stone-300 sm:h-28 sm:w-28 lg:aspect-square lg:h-auto lg:w-full">
+          <img
+            src="/prof_pic.jpeg"
+            alt="Kolichala Rajashekar"
+            class="h-full w-full origin-[center_16%] scale-[1.72] object-cover"
+          />
         </div>
-        
-        <!-- Social Links -->
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="mailto:rajashekar.kolichala@uibk.ac.at" title="Email" class="text-gray-600 hover:text-primary transition">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
-          </a>
-          <a href="https://scholar.google.com/citations?user=wq36gfgAAAAJ" target="_blank" rel="noopener" title="Google Scholar" class="text-gray-600 hover:text-primary transition">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/></svg>
-          </a>
-          <a href="https://github.com/rajsh3kar" target="_blank" rel="noopener" title="GitHub" class="text-gray-600 hover:text-primary transition">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.840 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.430.372.823 1.102.823 2.222v3.293c=0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/kolichala-rajashekar-a20b37a3" target="_blank" rel="noopener" title="LinkedIn" class="text-gray-600 hover:text-primary transition">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-          <a href="https://twitter.com/rajsh3kar" target="_blank" rel="noopener" title="X (Twitter)" class="text-gray-600 hover:text-primary transition">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
+        <div class="mt-4 min-w-0 sm:mt-0 lg:mt-5">
+          <h1 class="font-serif text-[1.7rem] font-semibold leading-tight text-ink">Kolichala Rajashekar</h1>
+          <p class="mt-1 text-sm font-medium text-stone-500">Ph.D.</p>
+          <p class="mt-2 text-[0.95rem] font-semibold text-primary">Postdoctoral Researcher</p>
+          <p class="text-[0.95rem] text-stone-700">University of Innsbruck</p>
+          <p class="text-sm text-stone-500">Innsbruck, Austria</p>
+          <nav aria-label="Contact" class="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-sm">
+            <a href="mailto:rajashekar.kolichala@uibk.ac.at" class="text-primary underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Email</a>
+            <a href="https://scholar.google.com/citations?user=wq36gfgAAAAJ" target="_blank" rel="noopener" class="text-primary underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Scholar</a>
+            <a href="https://github.com/rajsh3kar" target="_blank" rel="noopener" class="text-primary underline decoration-primary/30 underline-offset-4 hover:decoration-primary">GitHub</a>
+            <a href="https://www.linkedin.com/in/kolichala-rajashekar-a20b37a3" target="_blank" rel="noopener" class="text-primary underline decoration-primary/30 underline-offset-4 hover:decoration-primary">LinkedIn</a>
+            <a href="https://twitter.com/rajsh3kar" target="_blank" rel="noopener" class="text-primary underline decoration-primary/30 underline-offset-4 hover:decoration-primary">X</a>
+          </nav>
         </div>
       </div>
-    </div>
+    </aside>
 
-    <!-- Main Content -->
-    <div class="md:col-span-2 space-y-8">
-      <!-- Bio -->
-      <div class="bg-white rounded-lg shadow-md p-8">
-        <h1 class="text-3xl font-bold mb-2">Kolichala Rajashekar, Ph.D.</h1>
-        <p class="text-lg text-gray-600 mb-6">Postdoctoral Researcher · University of Innsbruck, Austria</p>
-        
-        <div class="prose prose-lg max-w-none">
-          <p>
-            I am a Postdoctoral Researcher at the University of Innsbruck, Austria, working on the <strong>DATAPACT.eu project</strong> 
-            (Compliance-aware Data/AI pipelines). I recently completed my PhD in Computer Science and Engineering at IIT Bhilai, 
-            focusing on <strong>Machine Learning for Optimizing Resources in Edge Computing</strong>.
+    <div class="space-y-14">
+      <section>
+        <p class="max-w-2xl text-lg leading-relaxed text-stone-800">
+          I am a postdoctoral researcher at the University of Innsbruck, working on
+          <a href="https://datapact.eu" target="_blank" rel="noopener" class="font-semibold text-ink underline decoration-primary/40 underline-offset-4 hover:decoration-primary">DATAPACT</a>,
+          a project on compliance-aware data and AI pipelines. My PhD at IIT Bhilai studied machine learning for optimizing resources in edge computing: reinforcement learning for systems, real-time federated learning, and UAV deployment.
+        </p>
+
+        <dl class="mt-8 grid grid-cols-1 gap-5 border-y border-stone-300/80 py-5 sm:grid-cols-3">
+          <div>
+            <dt class="font-serif text-2xl font-semibold text-ink">Innsbruck</dt>
+            <dd class="mt-1 text-sm text-stone-600">Postdoctoral researcher</dd>
+          </div>
+          <div>
+            <dt class="font-serif text-2xl font-semibold text-ink">3</dt>
+            <dd class="mt-1 text-sm text-stone-600">SCI Q1 journal papers</dd>
+          </div>
+          <div>
+            <dt class="font-serif text-2xl font-semibold text-ink">ICDCN</dt>
+            <dd class="mt-1 text-sm text-stone-600">Best Poster, 2023</dd>
+          </div>
+        </dl>
+
+        <ul class="mt-6 flex flex-wrap gap-2" aria-label="Research interests">
+          {interests.map((interest) => (
+            <li class="rounded-full bg-stone-200/70 px-3 py-1 text-sm text-stone-800">{interest}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="font-serif text-2xl font-semibold text-ink">Current work</h2>
+        <div class="mt-5 rounded-2xl border border-stone-300/80 bg-white/50 p-6 sm:p-7">
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-primary">University of Innsbruck · 2025–present</p>
+          <h3 class="mt-2 font-serif text-[1.7rem] font-semibold leading-tight">
+            <a href="https://datapact.eu" target="_blank" rel="noopener" class="hover:text-primary">DATAPACT</a>
+          </h3>
+          <p class="mt-1 text-stone-600">Compliance-aware data and AI pipelines</p>
+          <p class="mt-4 max-w-2xl leading-relaxed text-stone-800">
+            Lead architect for a consortium of 14 industry and academic partners. I design the core architecture in the C4 model and orchestrate scalable pipelines with Kubeflow and Kubernetes.
           </p>
-          
-          <p>My research focuses on developing efficient ML systems and algorithms for edge computing environments, particularly in:</p>
-          <ul>
-            <li><strong>Reinforcement Learning for System Optimization</strong></li>
-            <li><strong>Real-Time Federated Learning & EdgeAI</strong></li>
-            <li><strong>UAV Networks and Dynamic Deployment</strong></li>
-            <li><strong>Edge Computing and Multi-Access Edge Computing (MEC)</strong></li>
-            <li><strong>MLOps & Data/AI Pipelines</strong></li>
-          </ul>
-          
-          <p>
-            I have published in top-tier venues including <strong>Journal of Network and Systems Management (SCI Q1)</strong>, 
-            <strong>Ad Hoc Networks (SCI Q1)</strong>, <strong>IEEE NOMS</strong>, and <strong>ICDCN</strong> (Best Poster Award).
-          </p>
-          
-          <p class="text-sm text-gray-700 border-l-4 border-primary pl-4 mt-6">
-            <strong>Research Interests:</strong> ML Systems • EdgeAI • Federated Learning • Reinforcement Learning • Edge Computing • MLOps • UAV Networks • Distributed Systems
-          </p>
         </div>
-      </div>
+      </section>
 
-      <!-- News Section -->
-      <div class="bg-white rounded-lg shadow-md p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center justify-between">
-          <span>Recent News</span>
-          <a href="/news" class="text-sm text-primary hover:underline">View all →</a>
-        </h2>
-        <div class="space-y-4">
-          <div class="border-l-4 border-primary pl-4">
-            <p class="text-sm text-gray-500 font-medium">March 2025</p>
-            <p class="text-gray-700">
-              Started as <strong>Postdoctoral Researcher</strong> at University of Innsbruck, Austria working on DATAPACT.eu project
-            </p>
-          </div>
-
-          <div class="border-l-4 border-primary pl-4">
-            <p class="text-sm text-gray-500 font-medium">January 2025</p>
-            <p class="text-gray-700">
-              Two papers published in <strong>SCI Q1 journals</strong>: Ad Hoc Networks and Journal of Network and Systems Management
-            </p>
-          </div>
-
-          <div class="border-l-4 border-primary pl-4">
-            <p class="text-sm text-gray-500 font-medium">December 2024</p>
-            <p class="text-gray-700">
-              Successfully defended <strong>PhD</strong> at IIT Bhilai
-            </p>
-          </div>
-
-          <div class="border-l-4 border-primary pl-4">
-            <p class="text-sm text-gray-500 font-medium">October 2024</p>
-            <p class="text-gray-700">
-              Awarded <strong>$5,000 Google Cloud Research Credits</strong> as Principal Investigator
-            </p>
-          </div>
-          
-          <div class="border-l-4 border-yellow-500 pl-4 bg-yellow-50 py-2">
-            <p class="text-sm text-gray-500 font-medium">January 2023</p>
-            <p class="text-gray-700">
-              Received <strong>🏆 Best Poster Award</strong> at ICDCN 2023, IIT Kharagpur
-            </p>
-          </div>
+      <section>
+        <div class="flex items-baseline justify-between gap-4">
+          <h2 class="font-serif text-2xl font-semibold text-ink">Selected papers</h2>
+          <a href="/publications" class="text-sm text-primary underline decoration-primary/30 underline-offset-4 hover:decoration-primary">All publications</a>
         </div>
-      </div>
+        <div class="mt-2">
+          {papers.map((paper) => (
+            <article class="border-t border-stone-300/80 py-5">
+              <p class="text-xs font-semibold uppercase tracking-[0.12em] text-stone-500">
+                {paper.venue} · {paper.year} · {paper.note}
+              </p>
+              <h3 class="mt-1.5 font-serif text-xl font-semibold leading-snug">
+                <a href={paper.href} target="_blank" rel="noopener" class="hover:text-primary">{paper.title}</a>
+              </h3>
+              <p class="mt-2 max-w-2xl text-stone-700">{paper.summary}</p>
+            </article>
+          ))}
+        </div>
+      </section>
 
-      <!-- Quick Links -->
-      <div class="grid grid-cols-2 gap-4">
-        <a href="/publications" class="bg-primary text-white rounded-lg shadow-md p-6 hover:bg-blue-700 transition">
-          <h3 class="text-xl font-bold mb-2">Publications</h3>
-          <p class="text-sm opacity-90">View my research publications and citations</p>
-        </a>
-        <a href="/cv" class="bg-gray-700 text-white rounded-lg shadow-md p-6 hover:bg-gray-800 transition">
-          <h3 class="text-xl font-bold mb-2">Curriculum Vitae</h3>
-          <p class="text-sm opacity-90">Download my full CV</p>
-        </a>
-      </div>
+      <section>
+        <div class="flex items-baseline justify-between gap-4">
+          <h2 class="font-serif text-2xl font-semibold text-ink">News</h2>
+          <a href="/news" class="text-sm text-primary underline decoration-primary/30 underline-offset-4 hover:decoration-primary">All news</a>
+        </div>
+        <ol class="mt-2">
+          {news.map((item) => (
+            <li class="border-t border-stone-300/80 py-4">
+              <time class="text-sm text-stone-500">{item.date}</time>
+              <p class="mt-1 max-w-2xl text-stone-800">{item.text}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
     </div>
   </div>
 </Layout>
-
-<style>
-  .prose ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    margin: 1rem 0;
-  }
-  .prose li {
-    margin: 0.5rem 0;
-  }
-</style>

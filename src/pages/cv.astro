@@ -2,23 +2,30 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="CV - Kolichala Rajashekar">
-  <div class="bg-white rounded-lg shadow-md p-8">
-    <h1 class="text-3xl font-bold mb-2">Kolichala Rajashekar, Ph.D.</h1>
-    <p class="text-gray-600 mb-8">Postdoctoral Researcher · University of Innsbruck, Austria</p>
+<Layout title="CV - Kolichala Rajashekar" description="Curriculum vitae of Kolichala Rajashekar, postdoctoral researcher at the University of Innsbruck.">
+  <div>
+    <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <h1 class="font-serif text-4xl font-semibold text-ink">Kolichala Rajashekar, Ph.D.</h1>
+        <p class="mt-2 text-stone-600">Postdoctoral Researcher · University of Innsbruck, Austria</p>
+      </div>
+      <button type="button" onclick="window.print()" class="no-print rounded-full border border-primary px-4 py-2 text-sm font-semibold text-primary hover:bg-primary hover:text-white">
+        Save as PDF
+      </button>
+    </div>
     
     <div class="space-y-8">
       <!-- Academic Appointments -->
       <section>
-        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">Academic Appointments</h2>
+        <h2 class="mb-4 border-b border-stone-300 pb-2 font-serif text-2xl font-semibold text-ink">Academic Appointments</h2>
         <div class="space-y-4">
           <div>
-            <div class="flex justify-between items-start mb-1">
+            <div class="mb-1 flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
               <h3 class="text-lg font-semibold">Postdoctoral Researcher</h3>
               <span class="text-sm text-gray-500">Mar 2025 – Present</span>
             </div>
             <p class="text-gray-600">University of Innsbruck, Austria</p>
-            <ul class="list-disc list-inside mt-2 space-y-1 text-sm text-gray-700">
+            <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
               <li><strong>Project:</strong> DATAPACT.eu (Compliance-aware Data/AI pipelines)</li>
               <li><strong>Role:</strong> Lead Architect designing core architecture patterns (C4 model) for a consortium of 14 industry and academic partners</li>
               <li>Orchestrating scalable Data/AI pipelines using Kubeflow and Kubernetes for compliance-aware deployment</li>
@@ -29,22 +36,22 @@ import Layout from '../layouts/Layout.astro';
 
       <!-- Education -->
       <section>
-        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">Education</h2>
+        <h2 class="mb-4 border-b border-stone-300 pb-2 font-serif text-2xl font-semibold text-ink">Education</h2>
         <div class="space-y-4">
           <div>
-            <div class="flex justify-between items-start mb-1">
+            <div class="mb-1 flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
               <h3 class="text-lg font-semibold">Ph.D. in Computer Science and Engineering</h3>
               <span class="text-sm text-gray-500">Dec 2019 – Dec 2024</span>
             </div>
             <p class="text-gray-600">Indian Institute of Technology (IIT) Bhilai, India</p>
-            <ul class="list-disc list-inside mt-2 space-y-1 text-sm text-gray-700">
+            <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
               <li><strong>Dissertation:</strong> Machine Learning for Optimizing Resources in Edge Computing</li>
               <li><strong>Funding:</strong> UGC NET JRF Fellowship</li>
             </ul>
           </div>
 
           <div>
-            <div class="flex justify-between items-start mb-1">
+            <div class="mb-1 flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
               <h3 class="text-lg font-semibold">M.Tech. in Computer Science and Engineering</h3>
               <span class="text-sm text-gray-500">Jul 2015 – Jan 2018</span>
             </div>
@@ -53,7 +60,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <div>
-            <div class="flex justify-between items-start mb-1">
+            <div class="mb-1 flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
               <h3 class="text-lg font-semibold">B.Tech. in Computer Science and Engineering</h3>
               <span class="text-sm text-gray-500">Jul 2010 – Jun 2014</span>
             </div>
@@ -64,10 +71,10 @@ import Layout from '../layouts/Layout.astro';
 
       <!-- Grants & Funding -->
       <section>
-        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">Research Grants & Funding</h2>
+        <h2 class="mb-4 border-b border-stone-300 pb-2 font-serif text-2xl font-semibold text-ink">Research Grants & Funding</h2>
         <div class="space-y-3">
           <div>
-            <div class="flex justify-between items-start">
+            <div class="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
               <h3 class="font-semibold">Google Cloud Research Credits Program</h3>
               <span class="text-sm text-gray-500">2024</span>
             </div>
@@ -78,7 +85,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           
           <div>
-            <div class="flex justify-between items-start">
+            <div class="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
               <h3 class="font-semibold">UGC NET JRF Fellowship</h3>
               <span class="text-sm text-gray-500">2019 – 2024</span>
             </div>
@@ -98,7 +105,7 @@ import Layout from '../layouts/Layout.astro';
 
       <!-- Research Interests -->
       <section>
-        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">Research Interests</h2>
+        <h2 class="mb-4 border-b border-stone-300 pb-2 font-serif text-2xl font-semibold text-ink">Research Interests</h2>
         <p class="text-gray-700">
           Machine Learning Systems · EdgeAI · Federated Learning · Reinforcement Learning for Systems Optimization · 
           Edge Computing · MLOps & Data/AI Pipelines · UAV Networks · Distributed Systems
@@ -107,10 +114,10 @@ import Layout from '../layouts/Layout.astro';
 
       <!-- Teaching & Mentorship -->
       <section>
-        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">Teaching & Student Supervision</h2>
+        <h2 class="mb-4 border-b border-stone-300 pb-2 font-serif text-2xl font-semibold text-ink">Teaching & Student Supervision</h2>
         
         <h3 class="text-lg font-semibold mb-3">Student Supervision</h3>
-        <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+        <ul class="list-disc space-y-2 pl-5 text-gray-700 mb-4">
           <li><strong>PhD Students:</strong> Currently mentoring 2 PhD students (University of Innsbruck)</li>
           <li><strong>Undergraduate Students:</strong> Mentoring 1 Bachelor student (University of Innsbruck)</li>
           <li><strong>Past Mentorship:</strong> Supervised 2 B.Tech Honors research projects at IIT Bhilai</li>
@@ -128,7 +135,7 @@ import Layout from '../layouts/Layout.astro';
 
       <!-- Honors & Awards -->
       <section>
-        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">Honors & Awards</h2>
+        <h2 class="mb-4 border-b border-stone-300 pb-2 font-serif text-2xl font-semibold text-ink">Honors & Awards</h2>
         <ul class="space-y-2 text-gray-700">
           <li>🏆 <strong>Best Poster Award</strong>, ICDCN 2023 (IIT Kharagpur)</li>
           <li>✓ <strong>Qualified Competitive Exams:</strong> GATE 2015, UGC NET JRF (Top 2%), Telangana-SET 2018</li>
@@ -137,7 +144,7 @@ import Layout from '../layouts/Layout.astro';
 
       <!-- Technical Skills -->
       <section>
-        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">Technical Skills</h2>
+        <h2 class="mb-4 border-b border-stone-300 pb-2 font-serif text-2xl font-semibold text-ink">Technical Skills</h2>
         <div class="space-y-2">
           <p><strong>ML/AI Frameworks:</strong> PyTorch, Gymnasium (RL), Flower (Federated Learning), Scikit-learn, Transformers (Hugging Face), LangChain</p>
           <p><strong>Systems & MLOps:</strong> Kubernetes, Kubeflow, Docker, ARGO Workflows, Git, MCP</p>
@@ -147,7 +154,7 @@ import Layout from '../layouts/Layout.astro';
 
       <!-- Contact -->
       <section>
-        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">Contact</h2>
+        <h2 class="mb-4 border-b border-stone-300 pb-2 font-serif text-2xl font-semibold text-ink">Contact</h2>
         <div class="space-y-2 text-gray-700">
           <p><strong>Email:</strong> rajashekar.kolichala@uibk.ac.at</p>
           <p><strong>Location:</strong> 6020 Innsbruck, Austria</p>
@@ -158,7 +165,7 @@ import Layout from '../layouts/Layout.astro';
 
       <!-- References -->
       <section>
-        <h2 class="text-2xl font-bold mb-4 border-b-2 border-primary pb-2">References</h2>
+        <h2 class="mb-4 border-b border-stone-300 pb-2 font-serif text-2xl font-semibold text-ink">References</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <p class="font-semibold">Dr. Radu Prodan</p>
@@ -190,11 +197,6 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </section>
 
-      <div class="mt-8">
-        <a href="https://sites.google.com/view/kolichala-rajashekar/home" target="_blank" class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-          View Full CV Website
-        </a>
-      </div>
     </div>
   </div>
 </Layout>

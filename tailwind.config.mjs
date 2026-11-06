@@ -4,8 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#2563eb',
-        secondary: '#64748b',
+        primary: '#1e3a5f',
+        ink: '#1c1917',
+        paper: '#f3f0e8',
+      },
+      fontFamily: {
+        sans: ['"Source Sans 3"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        serif: ['Newsreader', 'Georgia', 'serif'],
+      },
+      maxWidth: {
+        page: '68rem',
       },
     },
   },
